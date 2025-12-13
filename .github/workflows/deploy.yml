@@ -10,9 +10,11 @@ jobs:
     environment: "FastMCP Cloud"
 
     steps:
+      # 1) Checkout the repo
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
+      # 2) FTP Deploy to public_html
       - name: 📤 FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
